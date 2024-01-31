@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width , initial scale="1.0>
+        <title>ecommerce website</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+        <script src="https://kit.fontawesome.com/e8fa2e31b4.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+    </head> 
+    <body> 
+        <section id="header"> 
+            <a href="#"><img src="img/folder/p4.png" class="logo"  alt=""></a>
+            <div> 
+                <ul id="navbar"> 
+                    <li><a href="index.html">Home</a></li>
+                     <li><a href="shop.html">Shop</a></li> 
+                     <li><a href="review.html">Review</a></li>
+                    <!-- <li><a href="cart.html"><i class="fa-fa fa-shopping-cart"></i></a></li> -->
+                </ul>
+            </div>
+        </section> 
+        <style>
+    * {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    position: relative;
+    min-height: 100vh;
+    display: auto;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+    /* background: #353935; */
+}
+
+.container {
+    background: #fff;
+    padding: 10%;
+    font-family: monospace;
+    width: auto;
+    box-shadow: 0 0 5px #000;
+}
+
+.head {
+    text-transform: uppercase;
+   
+}
+
+.text {
+    margin: 10px 0;
+    font-family: sans-serif;
+    font-size: 0.9em;
+}
+
+.commentbox {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.commentbox img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* float: left; */
+        margin-right: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content {
+    width: 100%;
+}
+
+.user {
+    border: none;
+    outline: none;
+    margin: 5px 0;
+    color: #808080;
+    margin-left: 20px;
+    padding: 10px;
+    font-size: 15px;
+}
+.comment{
+    margin-left: 50%;
+}
+.commentinput input {
+    border: none;
+    padding: 10px;
+    padding-left: 0;
+    outline: none;
+    border-bottom: 2px solid blue;
+    margin-bottom: 10px;
+    width: 95%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #808080;
+}
+
+.buttons button {
+    padding: 5px 10px;
+    background: lightgrey;
+    color: #808080;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0%;
+}
+
+.buttons button.abled {
+    background: blue;
+    color: #fff;
+}
+
+.policy {
+    margin: 20px 0;
+    font-size: 0.8em;
+    font-family: Arial, sans-serif;
+    color: #808080;
+}
+
+.policy a {
+    text-decoration: none;
+    color: blue;
+}
+
+.notify {
+    margin-right: 70%;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0%;
+}
+
+.notify input {
+    margin-right: 5px;
+    border: 2px solid #808080;
+}
+
+.parents {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.parents h1 {
+    font-size: 0.9em;
+}
+
+.parents p {
+    margin: 10px 0;
+    font-size: 0.9em;
+}
+
+.parents  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.engagements {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.engagements img {
+    width: 20px;
+
+}
+
+.engagements img:nth-child(1) {
+    margin-right: 10px;
+    width: 25px;
+}
+
+.date {
+    color: #808080;
+    font-size: 0.8em;
+}
+  
+</style>
+
+    <div class="container">
+        <div class="head"><h1>Post a Comment</h1></div>
+        <div><span id="comment">0</span> Comments </div>
+        <div class="text"><p>We are happy to hear from you</p></div>
+        <!-- <div class="comments"></div> -->
+        <div class="commentbox">
+            <img src="img/folder/user1.png" alt="">
+            <div class="content">
+                <h2>Comment as: </h2>
+                <h3><input type="text" placeholder="Enter Name" class="user"></h3>
+
+                <div class="commentinput">
+                    <input type="text" placeholder="Enter comment" class="usercomment">
+                    <div class="buttons">
+                        <button type="submit" disabled id="publish">Post Comment</button>
+                        <div class="notify">
+                            <input type="checkbox" class="notifyinput"> <span>Notify me</span>
+                        </div>
+                        <div class="comments"></div>
+                    </div>
+                </div>
+                <p class="policy">This site is procted by reCAPTCHA and the Google <a href="">privacy policy</a> and <a href="">Terms of Service</a> apply.</p>
+            </div>
+        </div>
+    </div>
+        
+<script>
+const USERID = {
+    name: null,
+    identity: null,
+    image: null,
+    message: null,
+    date: null
+}
+
+const userComment = document.querySelector(".usercomment");
+const publishBtn = document.querySelector("#publish");
+const comments = document.querySelector(".comments");
+const userName = document.querySelector(".user");
+const notify = document.querySelector(".notifyinput");
+
+    userComment.addEventListener("input", e => {
+        if(!userComment.value) {
+            publishBtn.setAttribute("disabled", "disabled");
+            publishBtn.classList.remove("abled")
+        }else {
+            publishBtn.removeAttribute("disabled");
+            publishBtn.classList.add("abled")
+        }
+    })
+
+    function addPost() {
+        if(!userComment.value) return;
+        USERID.name = userName.value;
+        if(USERID.name === "Enter Name") {
+            USERID.identity = false;
+            USERID.image = "img/folder/Enter Name.png"
+        }else {
+            USERID.identity = true;
+            USERID.image = "img/folder/user.png"
+        }
+
+        USERID.message = userComment.value;
+        USERID.date = new Date().toLocaleString();
+        let published = 
+        `<div class="parents">
+            <img src="${USERID.image}">
+            <div>
+                <h1>${USERID.name}</h1>
+                <p>${USERID.message}</p>
+                <div class="engagements"><img src="img/folder/like.png" id="like"><img src="img/folder/share.png" alt=""></div>
+                <span class="date">${USERID.date}</span>
+            </div>    
+        </div>`
+
+        comments.innerHTML += published;
+        userComment.value = "";
+        publishBtn.classList.remove("abled")
+
+        let commentsNum = document.querySelectorAll(".parents").length;
+        document.getElementById("comment").textContent = commentsNum;
+
+    }
+
+    publishBtn.addEventListener("click", addPost);
+
+</script>
+
+
+        </script>
+
+        <section id="sm-banner" class="section-p1"> 
+            <div class="banner-box">
+                <h4>Crazy Deals</h4>
+                <h2>buy 1 get 1 free</h2>
+                <span>the best classic dress in front of you</span>
+                <button class="white">learn more</button>
+            </div>
+            <div class="banner-box">
+                <h4>Crazy Deals</h4>
+                <h2>buy 1 get 1 free</h2>
+                <span>the best classic dress in front of you</span>
+                <button class="white">learn more</button>
+            </div>
+            </section>
+            <section id="banner3">
+                <div class="banner-box">
+              
+                    
+                    <!-- <H3>Winter colloection -50% off</H3> -->
+                    
+                    </div>
+                    <div class="banner-box">
+              
+                        
+                        <!-- <H3>Winter colloection -50% off</H3> -->
+                        
+                        </div>
+                        <div class="banner-box">
+              
+                            
+                            <!-- <H3>Winter colloection -50% off</H3> -->
+                            
+                            </div>
+    
+<footer class="section-p1"> 
+    <hr style="margin: 15px 0; border: 1px solid #eee">
+        <div class="col">
+            <img src="img/folder/your stationery-fotor-bg-remover-20240128204315.png" alt="">
+            <h4>contact</h4>
+            <p><strong>Adress:</strong>6/3 D-1-A Shastri Nagar Khandari Agra</p>
+            <p><strong>Phone:</strong>+91 9901798729</p>
+            <p><strong>Hours:</strong>8:00am - 9:00pm Mon - Sat</p>
+             <div class="follow"> 
+                <h4>Follow Us</h4>
+                <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
+                 </div>
+             </div>
+            </div>
+             <div class="col">
+                <h4>About</h4>
+                <a href="#">About us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">terms & conditions</a>
+                <a href="#">Contact Us</a>
+                </div>
+             </div>
+            
+             
+             <div class="col install"> 
+                 <p>Secure your payments by</p>
+                 <img src="img/folder/pay.png" alt="">
+             </div>
+             
+            </div>
+</footer>
+<script src="index.js"></script>
+        <!-- <script src="script.js"></script> -->
+    </body>
+
+</html>

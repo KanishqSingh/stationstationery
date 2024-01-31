@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width , initial scale="1.0>
+        <title>ecommerce website</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+        <script src="https://kit.fontawesome.com/e8fa2e31b4.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body{
+                margin:0;
+                padding:0;
+            }
+            .contact-box{
+                width:90%;
+                margin-top:50px;
+                margin-bottom:50px;
+                margin-left: 5%;
+                background-color: #222;
+                display: block;
+            }
+            .title{
+                width:100%;
+                text-align: center;
+                font-family: 'poppins','sans-serif';
+                font-size: 40px;
+                color:white;
+                padding-top:40px;
+            }
+            .title p{
+                font-size: larger;
+                color: white;
+            }
+            .text{
+                width:90%;
+                margin-left:5%;
+                margin-right:5%;
+                text-align: center;
+                font-family: 'poppins','sans-serif';
+                font-size:18px;
+                color:white;
+            }
+            .container{
+                width:100%;
+                padding:45px;
+                display:flex;
+                box-sizing: border-box;
+            }
+            .info{
+                width:50%;
+                font-family: 'poppins','sans-serif';
+                font-size: 18px;
+                color: white;
+                padding-top: 40px;
+            }
+            .info div{
+                background-color: #4c6868;
+                margin-bottom:10px;
+                margin-right: 100px;
+                padding:10px 10px;
+                text-align:center;
+            }
+            form{
+                width:50%;
+            }
+            input,textarea{
+                width:100%;
+                padding:10px 10px;
+                font-size: 18px;
+                margin-bottom: 5px;
+                font-family: 'poppins','sans-serif';
+            }
+            button{
+                border:none;
+                background-color: gold;
+                padding:8px 30px;
+                font-family: 'poppins','sans-serif';
+                font-size: 18px;
+                border-radius: 3px;
+                color:#2f4f4f;
+            }
+            button:hover{
+                background-color: #4c6868;
+                color: gold;
+                cursor: pointer;
+            }
+        </style>
+    </head> 
+    <body> 
+        <section id="header"> 
+            <a href="#"><img src="img/folder/p4.png" class="logo"  alt=""></a>
+            <div> 
+                <ul id="navbar"> 
+                    <li><a href="index.html">Home</a></li>
+                     <li><a href="shop.html">Shop</a></li> 
+                     <li><a href="review.html">Review</a></li>
+                     <!-- <div class="cart" ><i class="fa" onclick="window.location.href='spro.html';">cart</i><p id="count">0</p></div> -->
+                    
+                </ul>
+                
+            </div>
+        </section>
+
+<section class="contact-box">
+    <div class="title"><p>contact us</p>
+        
+    <p class="text1">fill  your information for the delivery</p>
+<div class="container">
+    <div class="info">
+        <div class="location">
+            <i class="fas fa-car"></i>
+            <p>6/3 D-1-A Shastri Nagar Khandari Agra</p>
+        </div>
+        <div class="email">
+            <i class="fa-solid fa-envelope"></i>
+                <p>yourstationerystation@gmail.com</p>
+            
+        </div>
+        <div class="contact">
+            <i class="fa-solid fa-envelope"></i>
+                <p>+91 956482321</p>
+    </div>
+</div>
+
+<form class="contact-form">
+       
+    <input type="text" placeholder="Name">
+    <input type="text" placeholder="phone number">
+    <input type="text" placeholder="email">
+    <textarea rows="10" placeholder="Your Message"></textarea>
+    
+    <button type="submit">submit</button>
+</form>
+    </div>
+</section>
+        
+
+<footer class="section-p1"> 
+    <hr style="margin: 15px 0; border: 1px solid #eee">
+        <div class="col">
+            <img src="img/folder/p4.png" alt="">
+            <h4>contact</h4>
+            <p><strong>Adress:</strong>6/3 D-1-A Shastri Nagar Khandari Agra</p>
+            <p><strong>Phone:</strong>+91 9901798729</p>
+            <p><strong>Hours:</strong>8:00am - 9:00pm Mon - Sat</p>
+             <div class="follow"> 
+                <h4>Follow Us</h4>
+                <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
+                 </div>
+             </div>
+            </div>
+             <div class="col">
+                <h4>About</h4>
+                <a href="#">About us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">terms & conditions</a>
+                <a href="#">Contact Us</a>
+                </div>
+             </div>
+            
+             
+             <div class="col install"> 
+                 <p>Secure your payments by</p>
+                 <img src="img/folder/pay.png" alt="">
+             </div>
+             
+            </div>
+</footer>
+<script src="index.js"></script>
+        <!-- <script src="script.js"></script> -->
+    </body>
+
+</html>
